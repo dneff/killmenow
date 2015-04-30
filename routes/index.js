@@ -8,18 +8,19 @@ var urlencodedParser = bodyParser.urlencoded({extended: false});
 var os = require('os');
 var prettySeconds = require('pretty-seconds');
 
+var heroes = require('../images');
+
+var hero_image = heroes.images[Math.floor(Math.random()*heroes.images.length)];
+
 var since = function () {
     return prettySeconds(Math.ceil(process.uptime()));
 };
 
-var hero = function () {
-
-}
-
 /* GET home page. */
 router.route('/')
 .get(function(req, res, next) {
-  res.render('index', { title: 'Kill Me Now!', host: os.hostname(), uptime: since() });
+  console.log(hero_image);
+  res.render('index', { title: 'Kill Me Now!', host: os.hostname(), uptime: since(), killpic: hero_image });
 })
 .post(urlencodedParser, function(req, res, next) {
   if (!req.body) return res.sendStatus(400);

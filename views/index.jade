@@ -3,6 +3,8 @@ extends layout
 block content
   h1= title
   h3 My name is !{host} and I've been alive for !{uptime}.
+  p
+  img(src=killpic)
 
   p
   form(name="killme", action="/", method="post")
