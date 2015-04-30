@@ -2,7 +2,7 @@
   "name": "killmenow",
   "version": "0.0.1",
   "private": true,
-  "description": "Node.js app that's very easy to kill. Good for testing schedulers or keeping operations on their toes."
+  "description": "Node.js app that's very easy to kill. Good for testing schedulers or keeping operations on their toes.",
   "author": "Dan Neff <dan@neff.cc>",
   "scripts": {
     "start": "node ./bin/www"
