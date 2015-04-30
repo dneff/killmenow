@@ -2,5 +2,8 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
-  #{uptime}
+  h3 My name is !{host} and I've been alive for !{uptime}.
+
+  p
+  form(name="killme", action="/", method="post")
+    input(type="submit", name="status", value="Kill Me Now!")
