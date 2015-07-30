@@ -3,4 +3,8 @@ extends layout
 block content
   #header-wrapper
     #header.container
+      #logo
         span Arrrrgh. My precious uptime....
+
+        form(name="killme", action="/", method="get")
+            input(class="button", type="submit" value="Back to the game, Killer.")
