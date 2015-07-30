@@ -1,11 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  h3 My name is !{host} and I've been alive for !{uptime}.
-  p
-  img(src=killpic)
+  #header-wrapper
+    #header.container
+      #logo
+        h1
+          a(href='#')= title
+        span My name is !{host} and I've been alive for !{uptime}.
+        p
+        img(src=killpic)
 
-  p
-  form(name="killme", action="/", method="post")
-    input(type="submit", name="status", value="Kill Me Now!")
+        p
+        form(name="killme", action="/", method="post")
+          input(class="button", type="submit", name="status", value="Kill Me Now!")

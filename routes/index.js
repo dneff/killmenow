@@ -25,7 +25,7 @@ router.route('/')
 .post(urlencodedParser, function(req, res, next) {
   if (!req.body) return res.sendStatus(400);
   if (req.body.status == 'Kill Me Now!') {
-    res.status(500).send("I've been clicked! Arrrghhh....");
+    res.render('killed', {uptime: since()});
     process.exit(1);
   } else {
     console.log(req.body.status);
