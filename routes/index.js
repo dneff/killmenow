@@ -26,7 +26,7 @@ router.route('/')
   if (!req.body) return res.sendStatus(400);
   if (req.body.status == 'Kill Me Now!') {
     res.render('killed', {uptime: since()});
-    process.exit(1);
+    setTimeout(process.exit(1), 408);
   } else {
     console.log(req.body.status);
     res.sendStatus(400);
